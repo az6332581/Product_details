@@ -2,7 +2,7 @@
 
 尚硅谷-前端
 
-尚優選PC端项目練習 原採用JS LESS開發
+尚優選PC端項目練習 原採用JS LESS開發
 
 採用 VUE SASS FLEX排版 AXIOS 開發
 https://az6332581.github.io/Product_details/
