@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderComponent />
+    <NavComponent />
+    <MainPage />
+    <DetailPage />
+    <RightNavPage
+      :style="{
+        top: 0 + 'px',
+        right: control.arr[control.num] + 'px',
+      }"
+      @getControl="setControl"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HeaderComponent from "./components/Header/HeaderComponent.vue";
+import NavComponent from "./components/Nav/NavComponent.vue";
+import MainPage from "./components/Main/MainPage.vue";
+import DetailPage from "./components/Detail/DtailPage.vue";
+import RightNavPage from "./components/RightNav/RightNavPage.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HeaderComponent,
+    NavComponent,
+    MainPage,
+    DetailPage,
+    RightNavPage,
+  },
+  data() {
+    return {
+      control: { num: 0, arr: [-294, 0] },
+    };
+  },
+  methods: {
+    setControl(val) {
+      this.control.num = val;
+    },
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass" scoped>
+#app
+  position: relative
 </style>
