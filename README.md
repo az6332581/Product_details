@@ -4,7 +4,7 @@
 
 尚優選PC端項目練習 原採用JS LESS Float排版 開發
 
-修改成 VUE SASS FLEX排版 AXIOS 開發
+修改成 VUE SASS FLEX排版 AXIOS 從0到有開發
 
 https://az6332581.github.io/Product_details/
 
